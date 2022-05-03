@@ -7,4 +7,7 @@ Tehnologii folosite: ASP.NET, Angular
 User Stories: https://trello.com/b/KaT9r3rW/user-stories
 
 Backlogs: https://trello.com/b/gWEmhbgM/backlogs
+
+Diagrama entitate-relatie pentru baza de date a proiectului:
+
 ![Diagrama](https://user-images.githubusercontent.com/75331740/166469880-3d1fdeca-1e94-4536-a46e-eb8e1569b824.png)
