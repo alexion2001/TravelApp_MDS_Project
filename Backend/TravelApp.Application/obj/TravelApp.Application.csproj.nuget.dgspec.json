@@ -1,0 +1,148 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Application\\TravelApp.Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Application\\TravelApp.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Application\\TravelApp.Application.csproj",
+        "projectName": "TravelApp.Application",
+        "projectPath": "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Application\\TravelApp.Application.csproj",
+        "packagesPath": "C:\\Users\\Facultate\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Facultate\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Domain\\TravelApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Domain\\TravelApp.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Domain\\TravelApp.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Domain\\TravelApp.Domain.csproj",
+        "projectName": "TravelApp.Domain",
+        "projectPath": "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Domain\\TravelApp.Domain.csproj",
+        "packagesPath": "C:\\Users\\Facultate\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Facultate\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

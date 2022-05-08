@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "fGk/GEZgHMq8SprBLg06csBl9rN604ce7PWc7KgnwTgaLaVawoSMNwG0H2jqdYQYsSzizQcdJz6m2vOjbYEwQA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Facultate\\Source\\Repos\\TravelApp_MDS_Project\\Backend\\TravelApp.Domain\\TravelApp.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.13\\microsoft.aspnetcore.cryptography.internal.5.0.13.nupkg.sha512",
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.13\\microsoft.aspnetcore.cryptography.keyderivation.5.0.13.nupkg.sha512",
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.13\\microsoft.extensions.identity.core.5.0.13.nupkg.sha512",
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.13\\microsoft.extensions.identity.stores.5.0.13.nupkg.sha512",
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\Facultate\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

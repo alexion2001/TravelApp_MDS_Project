@@ -1,0 +1,12 @@
+D:\travel_app\TravelApp.Domain\bin\Debug\net5.0\TravelApp.Domain.deps.json
+D:\travel_app\TravelApp.Domain\bin\Debug\net5.0\TravelApp.Domain.dll
+D:\travel_app\TravelApp.Domain\bin\Debug\net5.0\ref\TravelApp.Domain.dll
+D:\travel_app\TravelApp.Domain\bin\Debug\net5.0\TravelApp.Domain.pdb
+D:\travel_app\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.csproj.AssemblyReference.cache
+D:\travel_app\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\travel_app\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.AssemblyInfoInputs.cache
+D:\travel_app\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.AssemblyInfo.cs
+D:\travel_app\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.csproj.CoreCompileInputs.cache
+D:\travel_app\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.dll
+D:\travel_app\TravelApp.Domain\obj\Debug\net5.0\ref\TravelApp.Domain.dll
+D:\travel_app\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.pdb
