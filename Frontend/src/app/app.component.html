@@ -8,17 +8,17 @@
           <button type="button" mat-button (click)="drawer.toggle()">
             <mat-icon>menu</mat-icon>
           </button>
-          <span id = "titlu"></span>
+          <div id = "titlu">Nume</div>
           
         </mat-toolbar>
     </p>
             
     <mat-drawer #drawer class="example-sidenav" mode="side">
-      <button (click)="numePag("Home")" class="nav-link" routerLink="/home">Home</button>
-      <button (click)="numePag("Forum")" class="nav-link" routerLink="/forum">Forum</button>
-      <button class="nav-link" routerLink="/login">Login</button>
-      <button class="nav-link" routerLink="/register">Register</button>
-      <button class="nav-link" routerLink="/profil">Profil</button>
+      <button (click)="numePag('Home')" class="nav-link"  routerLink="/home">Home</button>
+      <button (click)="numePag('Forum')" class="nav-link" routerLink="/forum">Forum</button>
+      <button (click)="numePag('Login')" class="nav-link" routerLink="/login">Login</button>
+      <button (click)="numePag('Register')" class="nav-link" routerLink="/register">Register</button>
+      <button (click)="numePag('Profil')" class="nav-link" routerLink="/profil">Profil</button>
       
      </mat-drawer>
     

@@ -1,0 +1,20 @@
+<p>Te rugam sa te loghezi pentru a putea intra in contul tau !</p>
+
+<div class="container">
+    <div class="form-section">
+        <form [formGroup]="loginForm" class="form">
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Username" formControlName="username" />
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Parola</mat-label>
+                    <input matInput placeholder="Parola" type="password" formControlName="parola" />
+                </mat-form-field>
+        </form>
+    </div>
+
+    <button (click)="login()">Login</button>
+</div>
+
+

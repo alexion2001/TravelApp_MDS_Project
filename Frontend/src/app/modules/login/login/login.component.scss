@@ -1,2 +1,42 @@
 .body
-{background-color: #121212;}
+{background-color: #E4C5AF;}
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+p{color:#074F57 ;
+font-size: medium;}
+  
+.container{
+  display: inline-block;
+     
+
+
+
+//mat-input focused color
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: rgb(7, 113, 135);
+}
+
+// mat-input carent color
+::ng-deep .mat-input-element {
+  caret-color: rgb(7, 113, 135);
+}
+
+// mat-label focused style
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: rgb(7, 113, 135);
+}
+
+  .form{
+      .mat-form-field{
+           width: 100%;   
+      }  
+  }
+
+}
+button{
+  color: rgb(7, 113, 135);
+  background-color:#E4C5AF ;
+}

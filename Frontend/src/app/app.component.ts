@@ -1,3 +1,4 @@
+import { NONE_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -6,23 +7,38 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
 
+    
   constructor(
     private router: Router,
+    
   ) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    
     //id titlu
     var name;
     if (localStorage.getItem('NumePagina')){name = localStorage.getItem('NumePagina');}
     else{name = "Home"}
-    document.getElementById("titlu")?.innerHTML = name;
+    var titlu = document.getElementById('titlu');
+    if (name && name != 'none'){
+      titlu!.innerHTML = name;
+      //localStorage.setItem('NumePagina', 'none');
+      
+    }
+      
+    else
+      titlu!.innerHTML = "Home";
+   
+    
+    
   }
   title = 'Frontend';
 
   public numePag(nume: string): void {
     localStorage.setItem('NumePagina', nume);
+    
   }
 
 }
