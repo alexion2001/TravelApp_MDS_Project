@@ -18,7 +18,7 @@ namespace TravelApp.Infrastructure.Persistence.DbContexts.Travel.Configs
 
             builder.ToTable(nameof(IstoricVacante));
             builder.HasKey(prop => prop.VacantaId);
-            builder.HasOne(prop => prop.IstoricZbor)
+            builder.HasOne(prop => prop.Zbor)
                 .WithOne(v => v.IstoricVacante)
                 .HasForeignKey<IstoricZbor>(prop => prop.Id);
 

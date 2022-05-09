@@ -35,7 +35,7 @@ namespace TravelApp.Domain.Entities
         public virtual ICollection<IstoricZborUser> IstoricZborUsers { get; set; }
         public virtual ICollection<IstoricCazariUser> IstoricCazariUsers { get; set; }
         public virtual ICollection<IstoricVacanteUser> IstoricVacanteUsers { get; set; }
-
+        public virtual ICollection<RecenziiUsers> RecenziiUsers { get; set; }
         public virtual ICollection<IdentityRole> IdentityRoles { get; set; }
         public virtual ICollection<IdentityUserTokenConfirmation> IdentityUserTokenConfirmations { get; set; }
         public virtual ICollection<IdentityUserToken> IdentityUserTokens { get; set; }

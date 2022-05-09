@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TravelApp.Infrastructure.Migrations
 {
-    public partial class Final : Migration
+    public partial class FinalDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -38,11 +38,24 @@ namespace TravelApp.Infrastructure.Migrations
                 {
                     VacantaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ZborId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Cazareid = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Cazariid = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_IstoricVacante", x => x.VacantaId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Recenzii",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Oras = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Mesaj = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Recenzii", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -180,6 +193,31 @@ namespace TravelApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "RecenziiUsers",
+                columns: table => new
+                {
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdMesaj = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DataMesaj = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RecenziiUsers", x => new { x.UserId, x.IdMesaj });
+                    table.ForeignKey(
+                        name: "FK_RecenziiUsers_IdentityUser_UserId",
+                        column: x => x.UserId,
+                        principalTable: "IdentityUser",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_RecenziiUsers_Recenzii_IdMesaj",
+                        column: x => x.IdMesaj,
+                        principalTable: "Recenzii",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "IdentityUserIdentityRole",
                 columns: table => new
                 {
@@ -285,6 +323,11 @@ namespace TravelApp.Infrastructure.Migrations
                 name: "IX_IstoricZborUser_ZborId",
                 table: "IstoricZborUser",
                 column: "ZborId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RecenziiUsers_IdMesaj",
+                table: "RecenziiUsers",
+                column: "IdMesaj");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -308,6 +351,9 @@ namespace TravelApp.Infrastructure.Migrations
                 name: "IstoricZborUser");
 
             migrationBuilder.DropTable(
+                name: "RecenziiUsers");
+
+            migrationBuilder.DropTable(
                 name: "IdentityRole");
 
             migrationBuilder.DropTable(
@@ -315,6 +361,9 @@ namespace TravelApp.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "IstoricZbor");
+
+            migrationBuilder.DropTable(
+                name: "Recenzii");
 
             migrationBuilder.DropTable(
                 name: "IdentityUser");
