@@ -5,15 +5,22 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ForumComponent } from './forum/forum.component';
 import { MaterialModule } from '../material/material.module';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { FiltersComponent } from './filters/filters.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ForumComponent
+    ForumComponent,
+    FiltersComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +28,12 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MaterialModule,
     MatToolbarModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatDatepickerModule
   ]
 })
 export class HomeModule { }
