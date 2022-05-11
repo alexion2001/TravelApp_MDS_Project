@@ -33,7 +33,8 @@ export class ProfilComponent implements OnInit {
   }
 
   public obiective(): void {
-    
+    var url = "https://www.google.com/search?q=Obiective+turistice+" + this.planificaForm.controls['oras'].value;
+    window.open(url, "_blank");
     
   }
   public restaurant(): void {

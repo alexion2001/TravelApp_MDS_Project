@@ -39,17 +39,18 @@
         <div id="form-section">
             <form [formGroup]="planificaForm">
                 <div class="form-group">
-                    <label for="username">Orasul</label>
+                    <label for="oras">Oras</label>
                     <br>
-                    <input type="text" class="form-control" id="oras" formControlName="oras>
+                    <input type="text" class="form-control" id="oras" formControlName="oras">
                 </div>
-                
+              
             </form>
+            <p></p>
         </div>
 
 
-        <button>Cauta obiective</button>
-        <button>Cauta restaurant</button>
+        <button (click)="obiective()">Cauta obiective</button>
+        <button  (click)="restaurant()">Cauta restaurant</button>
         
     </div>
   
