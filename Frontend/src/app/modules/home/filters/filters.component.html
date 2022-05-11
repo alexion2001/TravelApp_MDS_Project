@@ -14,10 +14,27 @@
                     <input type="text" value="E-mail" class="form-control" id="email" formControlName="email">
                 </div>
                 <div class="form-group1">
-                    <label for="orasPlecare">Orașul de Plecare</label>
+
+                    <h4>Orașul de Plecare</h4>
+                    <mat-form-field appearance="fill">
+                    <mat-label>Oras</mat-label>
+                    <select type="text" class="form-control" id="orasPlecare" formControlName="orasPlecare" matNativeControl required>
+                        <option value="paris">Paris</option>
+                        <option value="bucuresti">Bucuresti</option>
+                        <option value="iasi">Iasi</option>
+                        <option value="cluj">Cluj</option>
+                    </select>
+                    </mat-form-field>
+
+                </div><nav></nav>
+
+                <div class="form-group1">
+                    <label for="orasDestinatie">Orașul de Sosire</label>
                     <br>
-                    <input type="text" class="form-control" id="orasPlecare" formControlName="orasPlecare">
+                    <input type="select" class="form-control" id="orasDestinatie" formControlName="orasDestinatie">
                 </div>
+
+
                 <div class="form-group1">
                     <label for="orasDestinatie">Orașul de Sosire</label>
                     <br>

@@ -45,6 +45,17 @@ input[type=text], input[type=number], input[type=date] {
     font-family: inherit;
     font-size: inherit;
 }
+select {
+    padding: 3px;
+    margin-left: 4px;
+    width: 150%;
+    border:0; // remove default border
+    border-bottom: 1px solid #74A57F;  // add only bottom border
+    box-shadow: 0 0 15px 5px rgba(98, 99, 93, 0.06);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: inherit;
+}
 
 button {
     /* remove default behavior */
