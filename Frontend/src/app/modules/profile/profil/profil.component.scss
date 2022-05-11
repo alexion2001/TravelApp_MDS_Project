@@ -1,0 +1,42 @@
+#container {
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+    background-color: #9fbba5;
+    border: 3px solid #79aa84;
+    border-radius: 10px;
+  }
+  
+.paragraf {
+    margin: auto;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    width: 300px;
+    text-align: center;
+    align-content: center;
+    // vertical-align: center;
+    border: 3px solid #077187;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: 500;
+    background-color: #074f57;
+  }
+
+
+  
+  button {
+    /* remove default behavior */
+    // appearance: none;
+    // -webkit-appearance: none;
+  
+    /* usual styles */
+    padding: 10px;
+    border: none;
+    background-color: #077187;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 150px;
+  }
+  

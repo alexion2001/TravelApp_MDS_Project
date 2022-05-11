@@ -1,1 +1,57 @@
-<button (click) = "logout()">Logout</button>
+
+
+<div id="container">
+    <div class="paragraf">
+        <p>
+            Bine ai venit !
+        </p>
+        <p>
+           AICI PUNEM DATELE USERULUI DIN BAZA DE DATE
+        </p>
+
+        <button (click) = "logout()">Logout</button>
+    </div>
+    <div class="paragraf">
+        <p>
+            Istoricul de cautari pentru zboruri
+        </p>
+        
+    </div>
+    <div class="paragraf">
+        <p>
+            Istoricul de cautari pentru cazari
+        </p>
+        
+    </div>
+
+    <div class="paragraf">
+        <p>
+            Istoricul vacantelor tale
+        </p>
+        
+    </div>
+    <div class="paragraf">
+        <p>
+           Planifica o vacanta cautand atractii turistice si restaurante
+        </p>
+
+
+        <div id="form-section">
+            <form [formGroup]="planificaForm">
+                <div class="form-group">
+                    <label for="username">Orasul</label>
+                    <br>
+                    <input type="text" class="form-control" id="oras" formControlName="oras>
+                </div>
+                
+            </form>
+        </div>
+
+
+        <button>Cauta obiective</button>
+        <button>Cauta restaurant</button>
+        
+    </div>
+  
+
+</div>
