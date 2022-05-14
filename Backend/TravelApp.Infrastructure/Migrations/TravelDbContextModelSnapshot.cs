@@ -19,6 +19,27 @@ namespace TravelApp.Infrastructure.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("TravelApp.Domain.Entities.CazariUsers", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CazareId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "CazareId");
+
+                    b.HasIndex("CazareId");
+
+                    b.ToTable("CazariUsers");
+                });
+
             modelBuilder.Entity("TravelApp.Domain.Entities.IdentityRole", b =>
                 {
                     b.Property<Guid>("Id")
@@ -191,9 +212,7 @@ namespace TravelApp.Infrastructure.Migrations
             modelBuilder.Entity("TravelApp.Domain.Entities.IstoricCazari", b =>
                 {
                     b.Property<Guid>("Id")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("IdUser")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("buget")
@@ -213,49 +232,13 @@ namespace TravelApp.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdUser");
-
-                    b.ToTable("IstoricCazari");
-                });
-
-            modelBuilder.Entity("TravelApp.Domain.Entities.IstoricVacante", b =>
-                {
-                    b.Property<Guid>("VacantaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("Cazariid")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ZborId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("VacantaId");
-
-                    b.ToTable("IstoricVacante");
-                });
-
-            modelBuilder.Entity("TravelApp.Domain.Entities.IstoricVacanteUser", b =>
-                {
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("Vacantaid")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("UserId", "Vacantaid");
-
-                    b.HasIndex("Vacantaid");
-
-                    b.ToTable("IstoricVacanteUser");
+                    b.ToTable("IstoriceCazari");
                 });
 
             modelBuilder.Entity("TravelApp.Domain.Entities.IstoricZbor", b =>
                 {
                     b.Property<Guid>("Id")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("IdUser")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("buget")
@@ -275,9 +258,7 @@ namespace TravelApp.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdUser");
-
-                    b.ToTable("IstoricZbor");
+                    b.ToTable("IstoricZboruri");
                 });
 
             modelBuilder.Entity("TravelApp.Domain.Entities.Recenzii", b =>
@@ -313,6 +294,46 @@ namespace TravelApp.Infrastructure.Migrations
                     b.HasIndex("IdMesaj");
 
                     b.ToTable("RecenziiUsers");
+                });
+
+            modelBuilder.Entity("TravelApp.Domain.Entities.ZboruriUsers", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ZborId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "ZborId");
+
+                    b.HasIndex("ZborId");
+
+                    b.ToTable("ZboruriUsers");
+                });
+
+            modelBuilder.Entity("TravelApp.Domain.Entities.CazariUsers", b =>
+                {
+                    b.HasOne("TravelApp.Domain.Entities.IstoricCazari", "IstoricCazari")
+                        .WithMany("CazariUsers")
+                        .HasForeignKey("CazareId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TravelApp.Domain.Entities.IdentityUser", "IdentityUser")
+                        .WithMany("CazariUsers")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("IdentityUser");
+
+                    b.Navigation("IstoricCazari");
                 });
 
             modelBuilder.Entity("TravelApp.Domain.Entities.IdentityRole", b =>
@@ -363,63 +384,6 @@ namespace TravelApp.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("TravelApp.Domain.Entities.IstoricCazari", b =>
-                {
-                    b.HasOne("TravelApp.Domain.Entities.IstoricVacante", "IstoricVacanta")
-                        .WithOne("Cazari")
-                        .HasForeignKey("TravelApp.Domain.Entities.IstoricCazari", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TravelApp.Domain.Entities.IdentityUser", "IdentityUser")
-                        .WithMany("IstoricCazariU")
-                        .HasForeignKey("IdUser")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("IdentityUser");
-
-                    b.Navigation("IstoricVacanta");
-                });
-
-            modelBuilder.Entity("TravelApp.Domain.Entities.IstoricVacanteUser", b =>
-                {
-                    b.HasOne("TravelApp.Domain.Entities.IdentityUser", "IdentityUser")
-                        .WithMany("IstoricVacanteUsers")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TravelApp.Domain.Entities.IstoricVacante", "IstoricVacante")
-                        .WithMany("IstoricVacanteUsers")
-                        .HasForeignKey("Vacantaid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("IdentityUser");
-
-                    b.Navigation("IstoricVacante");
-                });
-
-            modelBuilder.Entity("TravelApp.Domain.Entities.IstoricZbor", b =>
-                {
-                    b.HasOne("TravelApp.Domain.Entities.IstoricVacante", "IstoricVacante")
-                        .WithOne("Zbor")
-                        .HasForeignKey("TravelApp.Domain.Entities.IstoricZbor", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TravelApp.Domain.Entities.IdentityUser", "IdentityUser")
-                        .WithMany("IstoricZboruri")
-                        .HasForeignKey("IdUser")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("IdentityUser");
-
-                    b.Navigation("IstoricVacante");
-                });
-
             modelBuilder.Entity("TravelApp.Domain.Entities.RecenziiUsers", b =>
                 {
                     b.HasOne("TravelApp.Domain.Entities.Recenzii", "Recenzii")
@@ -439,6 +403,25 @@ namespace TravelApp.Infrastructure.Migrations
                     b.Navigation("Recenzii");
                 });
 
+            modelBuilder.Entity("TravelApp.Domain.Entities.ZboruriUsers", b =>
+                {
+                    b.HasOne("TravelApp.Domain.Entities.IdentityUser", "IdentityUser")
+                        .WithMany("ZboruriUsers")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TravelApp.Domain.Entities.IstoricZbor", "IstoricZbor")
+                        .WithMany("ZboruriUsers")
+                        .HasForeignKey("ZborId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("IdentityUser");
+
+                    b.Navigation("IstoricZbor");
+                });
+
             modelBuilder.Entity("TravelApp.Domain.Entities.IdentityRole", b =>
                 {
                     b.Navigation("IdentityUserRoles");
@@ -446,6 +429,8 @@ namespace TravelApp.Infrastructure.Migrations
 
             modelBuilder.Entity("TravelApp.Domain.Entities.IdentityUser", b =>
                 {
+                    b.Navigation("CazariUsers");
+
                     b.Navigation("IdentityRoles");
 
                     b.Navigation("IdentityUserRoles");
@@ -454,22 +439,19 @@ namespace TravelApp.Infrastructure.Migrations
 
                     b.Navigation("IdentityUserTokens");
 
-                    b.Navigation("IstoricCazariU");
-
-                    b.Navigation("IstoricVacanteUsers");
-
-                    b.Navigation("IstoricZboruri");
-
                     b.Navigation("RecenziiUsers");
+
+                    b.Navigation("ZboruriUsers");
                 });
 
-            modelBuilder.Entity("TravelApp.Domain.Entities.IstoricVacante", b =>
+            modelBuilder.Entity("TravelApp.Domain.Entities.IstoricCazari", b =>
                 {
-                    b.Navigation("Cazari");
+                    b.Navigation("CazariUsers");
+                });
 
-                    b.Navigation("IstoricVacanteUsers");
-
-                    b.Navigation("Zbor");
+            modelBuilder.Entity("TravelApp.Domain.Entities.IstoricZbor", b =>
+                {
+                    b.Navigation("ZboruriUsers");
                 });
 
             modelBuilder.Entity("TravelApp.Domain.Entities.Recenzii", b =>

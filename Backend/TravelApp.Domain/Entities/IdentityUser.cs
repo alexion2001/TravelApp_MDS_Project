@@ -32,9 +32,8 @@ namespace TravelApp.Domain.Entities
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }
 
-        public virtual ICollection<IstoricZbor> IstoricZboruri { get; set; }
-        public virtual ICollection<IstoricCazari> IstoricCazariU{ get; set; }
-        public virtual ICollection<IstoricVacanteUser> IstoricVacanteUsers { get; set; }
+        public virtual ICollection<CazariUsers> CazariUsers { get; set; }
+        public virtual ICollection<ZboruriUsers> ZboruriUsers{ get; set; }
         public virtual ICollection<RecenziiUsers> RecenziiUsers { get; set; }
         public virtual ICollection<IdentityRole> IdentityRoles { get; set; }
         public virtual ICollection<IdentityUserTokenConfirmation> IdentityUserTokenConfirmations { get; set; }

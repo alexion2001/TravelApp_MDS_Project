@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace TravelApp.Application.ViewModels.AppInternal
 {
-    public class CreateVacantaDTO
+    public class CreateZboruriUsersDTO
     {
-        public Guid VacantaId { get; set; }
+        public Guid Id { get; set; }
+        public Guid UserId { get; set; }
         public Guid ZborId { get; set; }
-        public Guid Cazariid { get; set; }
+        public String Status { get; set; }
     }
 }

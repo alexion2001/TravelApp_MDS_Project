@@ -18,20 +18,17 @@ namespace TravelApp.Infrastructure.Services.Managers.Istoric
             _context = context;
 
         }
-        public async Task<IstoricCazari> GetIstoricCazari(Guid IdUser)
+        public async Task<IstoricCazari> GetIstoricCazari(Guid id)
         {
-            var cazare = await _context.IstoriceCazari.Where(u => u.IdUser.Equals(IdUser)).SingleOrDefaultAsync();
+            var cazare = await _context.IstoriceCazari.Where(u => u.Id.Equals(id)).SingleOrDefaultAsync();
             return cazare;
 
         }
-
-        public async Task<dynamic> GetCazariByName(String username)
+        public async Task<dynamic> GetCazariByOras(String oras)
         {
 
             var result = from cazari in _context.IstoriceCazari
-                         join user in _context.IdentityUsers
-                         on cazari.IdUser equals user.Id
-                         where user.Username == username
+                         where cazari.oras == oras
 
                          select new
                          {
@@ -46,6 +43,7 @@ namespace TravelApp.Infrastructure.Services.Managers.Istoric
             var final = result.AsEnumerable();
             return final;
         }
+       
         public void Create(IstoricCazari entity)
         {
             _context.Set<IstoricCazari>().Add(entity);
@@ -58,6 +56,14 @@ namespace TravelApp.Infrastructure.Services.Managers.Istoric
         public async Task<bool> SaveAsync()
         {
             return await _context.SaveChangesAsync() > 0;
+        }
+        public void Update(IstoricCazari entity)
+        {
+            _context.Set<IstoricCazari>().Update(entity);
+        }
+        public async Task<IstoricCazari> GetById(Guid id)
+        {
+            return await _context.Set<IstoricCazari>().FindAsync(id);
         }
     }
 }

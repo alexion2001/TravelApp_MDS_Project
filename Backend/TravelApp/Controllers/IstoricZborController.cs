@@ -27,25 +27,12 @@ namespace TravelApp.Controllers
             return rez;
         }
 
-        [HttpGet("{idZborbyId}")]
-        public async Task<dynamic> GetZborById(Guid userid)
-        {
-            var rez = await _repository.GetZborById(userid);
-            return rez;
-        }
-        [HttpGet("{idName}")]
-        public async Task<dynamic> GetZborByName(string Username)
-        {
-            var rez = await _repository.GetZborByName(Username);
-            return rez;
-
-        }
+      
         [HttpPost]
         public async Task<IActionResult> CreateZbor(CreateZborDTO zbor)
         {
             IstoricZbor istoricZbor = new IstoricZbor();
             istoricZbor.Id = zbor.Id;
-            istoricZbor.IdUser = zbor.IdUser;
             istoricZbor.data_plecare = zbor.data_plecare;
             istoricZbor.data_retur = zbor.data_retur;
             istoricZbor.oras_plecare = zbor.oras_plecare;

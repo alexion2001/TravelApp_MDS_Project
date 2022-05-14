@@ -10,11 +10,14 @@ namespace TravelApp.Application.Common.Interfaces
     public interface IIstoricCazariManager
     {
        
-        Task<dynamic> GetCazariByName(String username);
-        Task<IstoricCazari> GetIstoricCazari(Guid IdUser);
+        Task<IstoricCazari> GetIstoricCazari(Guid id);
+        Task<dynamic> GetCazariByOras(String oras);
         void Create(IstoricCazari entity);
 
         void CreateRange(IEnumerable<IstoricCazari> entities);
         Task<bool> SaveAsync();
+        void Update(IstoricCazari entity);
+        Task<IstoricCazari> GetById(Guid id);
+        
     }
 }

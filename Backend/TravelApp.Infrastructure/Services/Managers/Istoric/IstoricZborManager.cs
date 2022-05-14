@@ -18,51 +18,14 @@ namespace TravelApp.Infrastructure.Services.Managers.Istoric
             _context = context;
 
         }
-        public async Task<IstoricZbor> GetIstoricZbor(Guid IdUser)
+        public async Task<IstoricZbor> GetIstoricZbor(Guid Id)
         {
-            var zbor = await _context.IstoricZboruri.Where(u => u.IdUser.Equals(IdUser)).SingleOrDefaultAsync();
+            var zbor = await _context.IstoricZboruri.Where(u => u.Id.Equals(Id)).SingleOrDefaultAsync();
             return zbor;
 
         }
 
-        public async Task<dynamic> GetZborById(Guid userid)
-        {
-
-            var result = from zboruri in _context.IstoricZboruri
-                         where zboruri.IdUser == userid
-
-                         select new
-                         {
-
-                             datap = zboruri.data_plecare,
-                             datav = zboruri.data_retur,
-                             op = zboruri.oras_plecare,
-                             ov = zboruri.oras_sosire,
-                             buget = zboruri.buget
-
-                         };
-            var final = result.AsEnumerable();
-            return final;
-        }
-
-        public async Task<dynamic> GetZborByName(string Username)
-        {
-            var result = from u in _context.IdentityUsers
-                         join i in _context.IstoricZboruri
-                         on u.Id equals i.IdUser
-                         where Username == u.Username
-                         select new
-                         {
-                             datap = i.data_plecare,
-                             datav = i.data_retur,
-                             op = i.oras_plecare,
-                             ov = i.oras_sosire,
-                             buget = i.buget,
-                             email = u.Email
-                         };
-            var final = result.AsEnumerable();
-            return final;
-        }
+       
         public void Create(IstoricZbor entity)
         {
             _context.Set<IstoricZbor>().Add(entity);
@@ -75,6 +38,14 @@ namespace TravelApp.Infrastructure.Services.Managers.Istoric
         public async Task<bool> SaveAsync()
         {
             return await _context.SaveChangesAsync() > 0;
+        }
+        public void Update(IstoricZbor entity)
+        {
+            _context.Set<IstoricZbor>().Update(entity);
+        }
+        public async Task<IstoricZbor> GetById(Guid id)
+        {
+            return await _context.Set<IstoricZbor>().FindAsync(id);
         }
     }
 }

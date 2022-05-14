@@ -19,34 +19,36 @@ namespace TravelApp.Controllers
         {
             _repository = repository;
         }
-        [HttpGet("idUserForCazari/{IdUser}")]
-        public async Task<IstoricCazari> GetIstoricCazari(Guid IdUser)
+        [HttpGet("idUserForCazari/{Id}")]
+        public async Task<IstoricCazari> GetIstoricCazari(Guid Id)
         {
-            var rez = await _repository.GetIstoricCazari(IdUser);
+            var rez = await _repository.GetIstoricCazari(Id);
             return rez;
         }
-        [HttpGet("UsernameForCazari/{username}")]
-        public async Task<dynamic> GetCazariByName(String username)
+        [HttpGet("GetCazariByOras/{oras}")]
+        public async Task<IstoricCazari> GetCazariByOras(String oras)
         {
-            var rez = await _repository.GetCazariByName(username);
+            var rez = await _repository.GetCazariByOras(oras);
             return rez;
         }
 
+        
         [HttpPost]
         public async Task<IActionResult> CreateCazari(CreateCazareDTO cazare)
         {
             IstoricCazari istoriccazare = new IstoricCazari();
             istoriccazare.Id = cazare.Id;
-            istoriccazare.IdUser = cazare.IdUser;
             istoriccazare.data_venire = cazare.data_venire;
             istoriccazare.data_plecare = cazare.data_plecare;
             istoriccazare.oras = cazare.oras;
-            istoriccazare.numeLoc = cazare.numeLoc;
+           // istoriccazare.numeLoc = cazare.numeLoc;
             istoriccazare.buget = cazare.buget;
             _repository.Create(istoriccazare);
             await _repository.SaveAsync();
             return Ok(new IstoricCazariDTO(istoriccazare));
 
         }
+
+  
     }
 }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TravelApp.Infrastructure.Migrations
 {
-    public partial class FinalBD : Migration
+    public partial class Final : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -33,16 +33,35 @@ namespace TravelApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "IstoricVacante",
+                name: "IstoriceCazari",
                 columns: table => new
                 {
-                    VacantaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ZborId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Cazariid = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    data_venire = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    data_plecare = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    oras = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    numeLoc = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    buget = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_IstoricVacante", x => x.VacantaId);
+                    table.PrimaryKey("PK_IstoriceCazari", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "IstoricZboruri",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    data_plecare = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    data_retur = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    oras_plecare = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    oras_sosire = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    buget = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IstoricZboruri", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -125,84 +144,54 @@ namespace TravelApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "IstoricCazari",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdUser = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    data_venire = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    data_plecare = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    oras = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    numeLoc = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    buget = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_IstoricCazari", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_IstoricCazari_IdentityUser_IdUser",
-                        column: x => x.IdUser,
-                        principalTable: "IdentityUser",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_IstoricCazari_IstoricVacante_Id",
-                        column: x => x.Id,
-                        principalTable: "IstoricVacante",
-                        principalColumn: "VacantaId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "IstoricVacanteUser",
+                name: "CazariUsers",
                 columns: table => new
                 {
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Vacantaid = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    CazareId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_IstoricVacanteUser", x => new { x.UserId, x.Vacantaid });
+                    table.PrimaryKey("PK_CazariUsers", x => new { x.UserId, x.CazareId });
                     table.ForeignKey(
-                        name: "FK_IstoricVacanteUser_IdentityUser_UserId",
+                        name: "FK_CazariUsers_IdentityUser_UserId",
                         column: x => x.UserId,
                         principalTable: "IdentityUser",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_IstoricVacanteUser_IstoricVacante_Vacantaid",
-                        column: x => x.Vacantaid,
-                        principalTable: "IstoricVacante",
-                        principalColumn: "VacantaId",
+                        name: "FK_CazariUsers_IstoriceCazari_CazareId",
+                        column: x => x.CazareId,
+                        principalTable: "IstoriceCazari",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "IstoricZbor",
+                name: "ZboruriUsers",
                 columns: table => new
                 {
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ZborId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdUser = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    data_plecare = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    data_retur = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    oras_plecare = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    oras_sosire = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    buget = table.Column<int>(type: "int", nullable: false)
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_IstoricZbor", x => x.Id);
+                    table.PrimaryKey("PK_ZboruriUsers", x => new { x.UserId, x.ZborId });
                     table.ForeignKey(
-                        name: "FK_IstoricZbor_IdentityUser_IdUser",
-                        column: x => x.IdUser,
+                        name: "FK_ZboruriUsers_IdentityUser_UserId",
+                        column: x => x.UserId,
                         principalTable: "IdentityUser",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_IstoricZbor_IstoricVacante_Id",
-                        column: x => x.Id,
-                        principalTable: "IstoricVacante",
-                        principalColumn: "VacantaId",
+                        name: "FK_ZboruriUsers_IstoricZboruri_ZborId",
+                        column: x => x.ZborId,
+                        principalTable: "IstoricZboruri",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -256,6 +245,11 @@ namespace TravelApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_CazariUsers_CazareId",
+                table: "CazariUsers",
+                column: "CazareId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_IdentityRole_IdentityUserId",
                 table: "IdentityRole",
                 column: "IdentityUserId");
@@ -276,28 +270,21 @@ namespace TravelApp.Infrastructure.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_IstoricCazari_IdUser",
-                table: "IstoricCazari",
-                column: "IdUser");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_IstoricVacanteUser_Vacantaid",
-                table: "IstoricVacanteUser",
-                column: "Vacantaid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_IstoricZbor_IdUser",
-                table: "IstoricZbor",
-                column: "IdUser");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_RecenziiUsers_IdMesaj",
                 table: "RecenziiUsers",
                 column: "IdMesaj");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ZboruriUsers_ZborId",
+                table: "ZboruriUsers",
+                column: "ZborId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "CazariUsers");
+
             migrationBuilder.DropTable(
                 name: "IdentityUserIdentityRole");
 
@@ -308,25 +295,22 @@ namespace TravelApp.Infrastructure.Migrations
                 name: "IdentityUserTokenConfirmation");
 
             migrationBuilder.DropTable(
-                name: "IstoricCazari");
-
-            migrationBuilder.DropTable(
-                name: "IstoricVacanteUser");
-
-            migrationBuilder.DropTable(
-                name: "IstoricZbor");
-
-            migrationBuilder.DropTable(
                 name: "RecenziiUsers");
+
+            migrationBuilder.DropTable(
+                name: "ZboruriUsers");
+
+            migrationBuilder.DropTable(
+                name: "IstoriceCazari");
 
             migrationBuilder.DropTable(
                 name: "IdentityRole");
 
             migrationBuilder.DropTable(
-                name: "IstoricVacante");
+                name: "RecenziiC");
 
             migrationBuilder.DropTable(
-                name: "RecenziiC");
+                name: "IstoricZboruri");
 
             migrationBuilder.DropTable(
                 name: "IdentityUser");

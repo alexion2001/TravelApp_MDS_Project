@@ -14,11 +14,12 @@ namespace TravelApp.Application.ViewModels.AppInternal
      
 
         public Guid Id { get; set; }
-        public Guid IdUser { get; set; }
         public DateTime data_plecare { get; set; }
         public DateTime data_retur { get; set; }
         public string oras_plecare { get; set; }
         public string oras_sosire { get; set; }
         public int buget { get; set; }
+        public string status { get; set; }
+
     }
 }

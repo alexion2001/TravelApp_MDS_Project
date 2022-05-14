@@ -10,12 +10,12 @@ namespace TravelApp.Application.Common.Interfaces
     public interface IIstoricZborManager
     {
         Task<IstoricZbor> GetIstoricZbor(Guid IdUser);
-        Task<dynamic> GetZborById(Guid userid);
-        
-        Task<dynamic> GetZborByName(string Username);
+
         void Create(IstoricZbor entity);
 
         void CreateRange(IEnumerable<IstoricZbor> entities);
+        void Update(IstoricZbor entity);
         Task<bool> SaveAsync();
+        Task<IstoricZbor> GetById(Guid id);
     }
 }

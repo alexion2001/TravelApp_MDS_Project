@@ -18,9 +18,9 @@ namespace TravelApp.Infrastructure.Persistence.DbContexts.Travel
         public DbSet<IdentityUserToken> IdentityUserTokens { get; set; }
         public DbSet<IdentityUserTokenConfirmation> IdentityUserTokenConfirmations { get; set; }
         public DbSet<IstoricCazari> IstoriceCazari { get; set; }
-        public DbSet<IstoricVacante> IstoriceVacante { get; set; }
-        public DbSet<IstoricVacanteUser> IstoricVacanteUsers { get; set; }
         public DbSet<IstoricZbor> IstoricZboruri { get; set; }
+        public DbSet<CazariUsers> CazariUsers { get; set; }
+        public DbSet<ZboruriUsers> ZboruriUsers { get; set; }
         public DbSet<Recenzii> RecenziiC { get; set; }
         public DbSet<RecenziiUsers> RecenziiUsersC { get; set; }
 

@@ -12,6 +12,7 @@ using TravelApp.Application.Features.PasswordHashing;
 using TravelApp.Application.ViewModels.External.Email;
 using TravelApp.Infrastructure.Persistence.DbContexts.Travel;
 using TravelApp.Infrastructure.Services.Managers.Email;
+using TravelApp.Infrastructure.Services.Managers.Istoric;
 using TravelApp.Infrastructure.Services.Managers.Token;
 using TravelApp.Infrastructure.Services.Managers.Users;
 
@@ -28,6 +29,10 @@ namespace TravelApp.Infrastructure
             services.AddSignInKeyConfiguration(configuration);
             services.AddRefreshTokenConfiguration(configuration);
             services.AddLoginTokenConfiguration(configuration);
+            services.AddScoped<IIstoricCazariManager, IstoricCazariManager>();
+            services.AddScoped<IIstoricZborManager, IstoricZborManager>();
+            services.AddScoped<ICazariUsersManager, CazariUsersManager>();
+            //services.AddScoped<IZboruriUsersManager, ZboruriUsersManager>();
             services.AddScoped<ITokenManager, TokenManager>();
             services.AddScoped<IUserManager, UserManager>();
             services.AddScoped<IEmailSender, EmailSender>();
