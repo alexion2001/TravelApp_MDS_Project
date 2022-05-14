@@ -37,3 +37,4 @@ C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Infrastructure\obj\Debug\net5.0\ref\TravelApp.Infrastructure.dll
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Infrastructure\obj\Debug\net5.0\TravelApp.Infrastructure.pdb
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Infrastructure\obj\Debug\net5.0\TravelApp.Infrastructure.genruntimeconfig.cache
+C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Infrastructure\obj\Debug\net5.0\TravelApp.Infrastructure.csproj.CopyComplete

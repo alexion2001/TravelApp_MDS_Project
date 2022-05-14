@@ -7,8 +7,9 @@
     "\\Backend\\TravelApp.Infrastructure",
     "\\Backend\\TravelApp.Infrastructure\\Services",
     "\\Backend\\TravelApp.Infrastructure\\Services\\Managers",
+    "\\Backend\\TravelApp.Infrastructure\\Services\\Managers\\Istoric",
     "\\Backend\\TravelApp.Infrastructure\\Services\\Managers\\Token"
   ],
-  "SelectedNode": "\\Backend\\TravelApp.Infrastructure\\Services\\Managers\\Token\\TokenManager.cs",
+  "SelectedNode": "\\Backend\\TravelApp\\TravelApp.sln",
   "PreviewInSolutionExplorer": false
 }

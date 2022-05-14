@@ -24,7 +24,6 @@ C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.AssemblyInfoInputs.cache
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.AssemblyInfo.cs
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.csproj.CoreCompileInputs.cache
-C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.csproj.CopyComplete
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.dll
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\ref\TravelApp.Application.dll
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.pdb

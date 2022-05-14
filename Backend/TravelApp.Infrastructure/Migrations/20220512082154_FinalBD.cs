@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TravelApp.Infrastructure.Migrations
 {
-    public partial class FinalDB : Migration
+    public partial class FinalBD : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -46,7 +46,7 @@ namespace TravelApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Recenzii",
+                name: "RecenziiC",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -55,7 +55,7 @@ namespace TravelApp.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Recenzii", x => x.Id);
+                    table.PrimaryKey("PK_RecenziiC", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -129,6 +129,7 @@ namespace TravelApp.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdUser = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     data_venire = table.Column<DateTime>(type: "datetime2", nullable: false),
                     data_plecare = table.Column<DateTime>(type: "datetime2", nullable: false),
                     oras = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -138,6 +139,12 @@ namespace TravelApp.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_IstoricCazari", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_IstoricCazari_IdentityUser_IdUser",
+                        column: x => x.IdUser,
+                        principalTable: "IdentityUser",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_IstoricCazari_IstoricVacante_Id",
                         column: x => x.Id,
@@ -175,6 +182,7 @@ namespace TravelApp.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdUser = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     data_plecare = table.Column<DateTime>(type: "datetime2", nullable: false),
                     data_retur = table.Column<DateTime>(type: "datetime2", nullable: false),
                     oras_plecare = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -184,6 +192,12 @@ namespace TravelApp.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_IstoricZbor", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_IstoricZbor_IdentityUser_IdUser",
+                        column: x => x.IdUser,
+                        principalTable: "IdentityUser",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_IstoricZbor_IstoricVacante_Id",
                         column: x => x.Id,
@@ -210,9 +224,9 @@ namespace TravelApp.Infrastructure.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_RecenziiUsers_Recenzii_IdMesaj",
+                        name: "FK_RecenziiUsers_RecenziiC_IdMesaj",
                         column: x => x.IdMesaj,
-                        principalTable: "Recenzii",
+                        principalTable: "RecenziiC",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -241,54 +255,6 @@ namespace TravelApp.Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "IstoricCazariUser",
-                columns: table => new
-                {
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Cazareid = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_IstoricCazariUser", x => new { x.UserId, x.Cazareid });
-                    table.ForeignKey(
-                        name: "FK_IstoricCazariUser_IdentityUser_UserId",
-                        column: x => x.UserId,
-                        principalTable: "IdentityUser",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_IstoricCazariUser_IstoricCazari_Cazareid",
-                        column: x => x.Cazareid,
-                        principalTable: "IstoricCazari",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "IstoricZborUser",
-                columns: table => new
-                {
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ZborId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_IstoricZborUser", x => new { x.UserId, x.ZborId });
-                    table.ForeignKey(
-                        name: "FK_IstoricZborUser_IdentityUser_UserId",
-                        column: x => x.UserId,
-                        principalTable: "IdentityUser",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_IstoricZborUser_IstoricZbor_ZborId",
-                        column: x => x.ZborId,
-                        principalTable: "IstoricZbor",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_IdentityRole_IdentityUserId",
                 table: "IdentityRole",
@@ -310,9 +276,9 @@ namespace TravelApp.Infrastructure.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_IstoricCazariUser_Cazareid",
-                table: "IstoricCazariUser",
-                column: "Cazareid");
+                name: "IX_IstoricCazari_IdUser",
+                table: "IstoricCazari",
+                column: "IdUser");
 
             migrationBuilder.CreateIndex(
                 name: "IX_IstoricVacanteUser_Vacantaid",
@@ -320,9 +286,9 @@ namespace TravelApp.Infrastructure.Migrations
                 column: "Vacantaid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_IstoricZborUser_ZborId",
-                table: "IstoricZborUser",
-                column: "ZborId");
+                name: "IX_IstoricZbor_IdUser",
+                table: "IstoricZbor",
+                column: "IdUser");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RecenziiUsers_IdMesaj",
@@ -342,13 +308,13 @@ namespace TravelApp.Infrastructure.Migrations
                 name: "IdentityUserTokenConfirmation");
 
             migrationBuilder.DropTable(
-                name: "IstoricCazariUser");
+                name: "IstoricCazari");
 
             migrationBuilder.DropTable(
                 name: "IstoricVacanteUser");
 
             migrationBuilder.DropTable(
-                name: "IstoricZborUser");
+                name: "IstoricZbor");
 
             migrationBuilder.DropTable(
                 name: "RecenziiUsers");
@@ -357,19 +323,13 @@ namespace TravelApp.Infrastructure.Migrations
                 name: "IdentityRole");
 
             migrationBuilder.DropTable(
-                name: "IstoricCazari");
+                name: "IstoricVacante");
 
             migrationBuilder.DropTable(
-                name: "IstoricZbor");
-
-            migrationBuilder.DropTable(
-                name: "Recenzii");
+                name: "RecenziiC");
 
             migrationBuilder.DropTable(
                 name: "IdentityUser");
-
-            migrationBuilder.DropTable(
-                name: "IstoricVacante");
         }
     }
 }

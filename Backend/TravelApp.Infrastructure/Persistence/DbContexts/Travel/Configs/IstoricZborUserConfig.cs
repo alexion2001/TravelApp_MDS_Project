@@ -9,20 +9,17 @@ using TravelApp.Domain.Entities;
 
 namespace TravelApp.Infrastructure.Persistence.DbContexts.Travel.Configs
 {
-    class IstoricZborUserConfig : IEntityTypeConfiguration<IstoricZborUser>
+    class IstoricZborUserConfig : IEntityTypeConfiguration<IstoricZbor>
     {
-        public void Configure(EntityTypeBuilder<IstoricZborUser> builder)
+        public void Configure(EntityTypeBuilder<IstoricZbor> builder)
         {
-            builder.ToTable(nameof(IstoricZborUser));
-            builder.HasKey(ur => new { ur.UserId, ur.ZborId });
+            builder.ToTable(nameof(IstoricZbor));
+            builder.HasKey(ur => new { ur.Id });
 
             builder.HasOne(ur => ur.IdentityUser)
-                .WithMany(u => u.IstoricZborUsers)
-                .HasForeignKey(ur => ur.UserId);
+                .WithMany(u => u.IstoricZboruri)
+                .HasForeignKey(u => u.IdUser);
 
-            builder.HasOne(ur => ur.IstoricZbor)
-                .WithMany(r => r.IstoricZborUsers)
-                .HasForeignKey(ur => ur.ZborId);
         }
     }
-}
+    }
