@@ -8,7 +8,7 @@ User Stories: https://trello.com/b/KaT9r3rW/user-stories
 
 Backlogs: https://trello.com/b/gWEmhbgM/backlogs
 
-Diagrama entitate-relatie pentru baza de date a proiectului:
+Diagrama Conceptuala pentru baza de date a proiectului:
 
 
 ![2022-05-16 (2)](https://user-images.githubusercontent.com/75331740/168601981-871f48fb-1ec0-4716-94de-d89a642ec655.png)
