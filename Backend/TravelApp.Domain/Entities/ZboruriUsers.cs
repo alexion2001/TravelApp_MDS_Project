@@ -9,12 +9,6 @@ namespace TravelApp.Domain.Entities
     public class ZboruriUsers
     {
         public ZboruriUsers() { }
-        public ZboruriUsers(Guid userid, Guid zborid)
-        {
-            this.UserId = userid;
-            this.ZborId = zborid;
-        }
-
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public Guid ZborId { get; set; }

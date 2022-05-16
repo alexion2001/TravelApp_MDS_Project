@@ -32,7 +32,7 @@ namespace TravelApp.Infrastructure
             services.AddScoped<IIstoricCazariManager, IstoricCazariManager>();
             services.AddScoped<IIstoricZborManager, IstoricZborManager>();
             services.AddScoped<ICazariUsersManager, CazariUsersManager>();
-            //services.AddScoped<IZboruriUsersManager, ZboruriUsersManager>();
+            services.AddScoped<IZboruriUsersManager, ZboruriUsersManager>();
             services.AddScoped<ITokenManager, TokenManager>();
             services.AddScoped<IUserManager, UserManager>();
             services.AddScoped<IEmailSender, EmailSender>();

@@ -9,11 +9,6 @@ namespace TravelApp.Domain.Entities
     public class CazariUsers
     {
         public CazariUsers() { }
-        public CazariUsers(Guid userid, Guid cazareid)
-        {
-            this.UserId = userid;
-            this.CazareId = cazareid;
-        }
 
         public Guid Id { get; set; }
         public Guid UserId { get; set; }

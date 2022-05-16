@@ -10,7 +10,7 @@ using TravelApp.Infrastructure.Persistence.DbContexts.Travel;
 namespace TravelApp.Infrastructure.Migrations
 {
     [DbContext(typeof(TravelDbContext))]
-    [Migration("20220514184734_Final")]
+    [Migration("20220516120050_Final")]
     partial class Final
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

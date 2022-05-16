@@ -31,7 +31,7 @@ namespace TravelApp.Controllers
             var rez = await _repository.GetCazariByUser(user);
             return rez;
         }
-        [HttpGet("GetCazariByUserStatus/{user,status}")]
+        [HttpGet("GetCazariByUserStatus/{user}")]
         public async Task<dynamic> GetCazariByUserStatus(Guid user, String status)
         {
             var rez = await _repository.GetCazariByUserStatus(user, status);

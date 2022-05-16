@@ -10,6 +10,6 @@
     "\\Backend\\TravelApp.Infrastructure\\Services\\Managers\\Istoric",
     "\\Backend\\TravelApp.Infrastructure\\Services\\Managers\\Token"
   ],
-  "SelectedNode": "\\Backend\\TravelApp\\TravelApp.sln",
+  "SelectedNode": "\\Backend\\TravelApp.Application\\DependencyInjection.cs",
   "PreviewInSolutionExplorer": false
 }

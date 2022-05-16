@@ -33,7 +33,7 @@ namespace TravelApp.Controllers
             return rez;
         }
 
-        [HttpGet("GetZboruriByUserStatus/{user,status}")]
+        [HttpGet("GetZboruriByUserStatus/{user}")]
         public async Task<dynamic> GetZboruriByUserStatus(Guid user, String status)
         {
             var rez = await _repository.GetZboruriByUserStatus(user,status);
