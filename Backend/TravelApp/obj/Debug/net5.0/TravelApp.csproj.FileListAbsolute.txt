@@ -168,3 +168,4 @@ C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp\obj\Debug\net5.0\TravelApp.csproj.CopyComplete

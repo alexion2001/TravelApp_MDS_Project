@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TravelApp.Domain.Entities
+namespace TravelApp.Application.ViewModels.AppInternal
 {
-    public class Recenzii
+    public class CreateRecenziiDTO
     {
-      //  public Recenzii() { }
         public Guid Id { get; set; }
         public string Oras { get; set; }
         public string Mesaj { get; set; }
-        public virtual ICollection<RecenziiUsers> RecenziiUsers { get; set; }
     }
 }
