@@ -22,3 +22,15 @@ C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.dll
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\ref\TravelApp.Domain.dll
 C:\Users\Talida\Source\Repos\alexion2001\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.pdb
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\bin\Debug\net5.0\TravelApp.Domain.deps.json
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\bin\Debug\net5.0\TravelApp.Domain.dll
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\bin\Debug\net5.0\ref\TravelApp.Domain.dll
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\bin\Debug\net5.0\TravelApp.Domain.pdb
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.csproj.AssemblyReference.cache
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.AssemblyInfoInputs.cache
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.AssemblyInfo.cs
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.dll
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\ref\TravelApp.Domain.dll
+C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.pdb
