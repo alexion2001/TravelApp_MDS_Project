@@ -7,6 +7,9 @@ Tehnologii folosite: ASP.NET, Angular
 ```
 User Stories: https://trello.com/b/KaT9r3rW/user-stories
 
+
+![2022-06-13 (5)](https://user-images.githubusercontent.com/75331740/173365024-035bc4d6-7e39-405e-bb4a-e0004107e2eb.png)
+
 Backlogs: https://trello.com/b/gWEmhbgM/backlogs
 
 Diagrama UML:
