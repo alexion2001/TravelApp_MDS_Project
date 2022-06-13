@@ -1,9 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Talida\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Talida\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\Facultate\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Facultate\\.nuget\\packages"
     ]
   }
 }

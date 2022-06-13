@@ -25,3 +25,4 @@ namespace TravelApp.Infrastructure.Persistence.DbContexts.Travel.Configs
         }
     }
 }
+                                                            

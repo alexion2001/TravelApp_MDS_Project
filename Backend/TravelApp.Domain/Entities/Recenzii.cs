@@ -8,6 +8,7 @@ namespace TravelApp.Domain.Entities
 {
     public class Recenzii
     {
+      //  public Recenzii() { }
         public Guid Id { get; set; }
         public string Oras { get; set; }
         public string Mesaj { get; set; }

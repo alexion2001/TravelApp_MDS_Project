@@ -14,7 +14,7 @@ namespace TravelApp.Domain.Entities
         public string oras_plecare { get; set; }
         public string oras_sosire { get; set; }
         public int buget { get; set; }
-        public virtual ICollection<IstoricZborUser> IstoricZborUsers { get; set; }
-        public virtual IstoricVacante IstoricVacante { get; set; }
+        public virtual ICollection<ZboruriUsers> ZboruriUsers { get; set; }
+
     }
 }

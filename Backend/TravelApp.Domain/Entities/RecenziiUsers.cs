@@ -9,12 +9,8 @@ namespace TravelApp.Domain.Entities
     public class RecenziiUsers
     {
         public RecenziiUsers() { }
-        public RecenziiUsers(Guid userid, Guid mesajid)
-        {
-            this.UserId = userid;
-            this.IdMesaj = mesajid;
-
-        }
+   
+        public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public Guid IdMesaj { get; set; }
         public virtual IdentityUser IdentityUser { get; set; }

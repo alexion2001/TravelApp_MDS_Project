@@ -1,14 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Backend",
-    "\\Backend\\TravelApp",
-    "\\Backend\\TravelApp.Application",
-    "\\Backend\\TravelApp.Infrastructure",
-    "\\Backend\\TravelApp.Infrastructure\\Services",
-    "\\Backend\\TravelApp.Infrastructure\\Services\\Managers",
-    "\\Backend\\TravelApp.Infrastructure\\Services\\Managers\\Token"
+    ""
   ],
-  "SelectedNode": "\\Backend\\TravelApp.Infrastructure\\Services\\Managers\\Token\\TokenManager.cs",
+  "SelectedNode": "\\TravelApp.sln",
   "PreviewInSolutionExplorer": false
 }

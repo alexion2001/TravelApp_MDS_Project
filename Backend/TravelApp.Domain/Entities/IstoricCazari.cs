@@ -13,9 +13,7 @@ namespace TravelApp.Domain.Entities
         public DateTime data_plecare { get; set; }
         public string oras { get; set; }
         public string numeLoc { get; set; }
-
         public int buget { get; set; }
-        public virtual ICollection<IstoricCazariUser> IstoricCazariUsers { get; set; }
-        public IstoricVacante IstoricVacanta { get; set; }
+        public virtual ICollection<CazariUsers> CazariUsers { get; set; }
     }
 }
