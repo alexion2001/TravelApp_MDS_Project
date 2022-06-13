@@ -32,7 +32,7 @@ export class FiltersComponent implements OnInit {
       oras: new FormControl(''),
       dataCheckIn: new FormControl(this.datePipe.transform(this.currentDate, 'yyyy-MM-dd')),
       dataCheckOut: new FormControl(this.datePipe.transform(this.currentDate, 'yyyy-MM-dd')),
-      numeHotel: new FormControl('')
+      buget: new FormControl('')
     });
    }
 
@@ -54,7 +54,7 @@ export class FiltersComponent implements OnInit {
     this.cazare.oras = this.cazareForm.value.oras;
     this.cazare.dataCheckIn = this.cazareForm.value.dataCheckIn;
     this.cazare.dataCheckOut = this.cazareForm.value.dataCheckOut;
-    this.cazare.numeHotel = this.cazareForm.value.numeHotel;
+    this.cazare.buget = this.cazareForm.value.buget;
   }
 
 }

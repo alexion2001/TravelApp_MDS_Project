@@ -9,37 +9,29 @@
         <div id="form-section1">
             <form [formGroup]="detaliiForm" (ngSubmit)="onSubmitDetalii()">
                 <div class="form-group1">
-                    <label for="email">E-mail</label>
-                    <br>
-                    <input type="text" value="E-mail" class="form-control" id="email" formControlName="email">
-                </div>
-                <div class="form-group1">
 
                     <h4>Orașul de Plecare</h4>
                     <mat-form-field appearance="fill">
                     <mat-label>Oras</mat-label>
                     <select type="text" class="form-control" id="orasPlecare" formControlName="orasPlecare" matNativeControl required>
-                        <option value="paris">Paris</option>
                         <option value="bucuresti">Bucuresti</option>
-                        <option value="iasi">Iasi</option>
-                        <option value="cluj">Cluj</option>
                     </select>
                     </mat-form-field>
 
                 </div><nav></nav>
 
                 <div class="form-group1">
-                    <label for="orasDestinatie">Orașul de Sosire</label>
-                    <br>
-                    <input type="select" class="form-control" id="orasDestinatie" formControlName="orasDestinatie">
-                </div>
+                    <h4>Orașul de Sosire</h4>
+                    <mat-form-field appearance="fill">
+                    <mat-label>Orașul de Sosire</mat-label>
+                    <select type="text" class="form-control" id="orasDestinatie" formControlName="orasDestinatie" matNativeControl required>
+                        <option value="bucuresti">Paris</option>
+                    </select>
+                    </mat-form-field>
 
 
-                <div class="form-group1">
-                    <label for="orasDestinatie">Orașul de Sosire</label>
-                    <br>
-                    <input type="text" class="form-control" id="orasDestinatie" formControlName="orasDestinatie">
                 </div>
+
                 <div class="form-group1">
                     <label for="dataPlecare">Data de Plecare</label>
                     <br>
@@ -62,7 +54,6 @@
         <div *ngIf="submittedDetalii">
         <!-- <div> -->
             <div id="input-viewed">
-                <p>E-mail: {{model.email}}</p>
                 <p>Orașul de Plecare: {{model.orasPlecare}}</p>
                 <p>Orașul de Sosire: {{model.orasDestinatie}}</p>
                 <p>Data de Plecare: {{model.dataPlecare | date:'dd/MM/yyyy'}}</p>
@@ -93,9 +84,10 @@
                     <input type="date" class="form-control" id="dataCheckOut" formControlName="dataCheckOut">
                 </div>
                 <div class="form-group2">
-                    <label for="numeHotel">Hotel</label>
-                    <input type="text" class="form-control" id="numeHotel" formControlName="numeHotel">
+                    <label for="buget">Buget</label>
+                    <input type="text" class="form-control" id="buget" formControlName="buget">
                 </div>
+                
                 <button type="submit" class="btn btn-success">Caută Cazare!</button>
             </form>
         </div>
@@ -106,7 +98,7 @@
                 <p>Oraș: {{cazare.oras}}</p>
                 <p>Check In: {{cazare.dataCheckIn | date:'dd/MM/yyyy'}}</p>
                 <p>Check Out: {{cazare.dataCheckOut | date:'dd/MM/yyyy'}}</p>
-                <p>Hotel: {{cazare.numeHotel}}</p>
+                <p>Buget: {{cazare.buget}}</p>
             </div>
         </div>  
     </div>
