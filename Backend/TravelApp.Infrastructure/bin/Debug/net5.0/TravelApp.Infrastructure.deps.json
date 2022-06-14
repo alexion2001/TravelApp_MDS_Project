@@ -1331,6 +1331,7 @@
       },
       "TravelApp.Application/1.0.0": {
         "dependencies": {
+          "MailKit": "2.6.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.13",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",

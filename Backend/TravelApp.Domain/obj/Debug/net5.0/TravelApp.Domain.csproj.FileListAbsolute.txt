@@ -34,3 +34,15 @@ C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\n
 C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.dll
 C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\ref\TravelApp.Domain.dll
 C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.pdb
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\bin\Debug\net5.0\TravelApp.Domain.deps.json
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\bin\Debug\net5.0\TravelApp.Domain.dll
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\bin\Debug\net5.0\ref\TravelApp.Domain.dll
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\bin\Debug\net5.0\TravelApp.Domain.pdb
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.csproj.AssemblyReference.cache
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.AssemblyInfoInputs.cache
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.AssemblyInfo.cs
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.csproj.CoreCompileInputs.cache
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.dll
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\ref\TravelApp.Domain.dll
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Domain\obj\Debug\net5.0\TravelApp.Domain.pdb

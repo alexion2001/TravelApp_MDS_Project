@@ -43,3 +43,17 @@ C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Application\obj\De
 C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.dll
 C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Application\obj\Debug\net5.0\ref\TravelApp.Application.dll
 C:\Users\Facultate\source\repos\proiect_mds\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.pdb
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.dll
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\ref\TravelApp.Application.dll
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.pdb
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\bin\Debug\net5.0\TravelApp.Application.deps.json
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\bin\Debug\net5.0\TravelApp.Application.dll
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\bin\Debug\net5.0\ref\TravelApp.Application.dll
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\bin\Debug\net5.0\TravelApp.Application.pdb
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\bin\Debug\net5.0\TravelApp.Domain.dll
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\bin\Debug\net5.0\TravelApp.Domain.pdb
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.csproj.AssemblyReference.cache
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.AssemblyInfoInputs.cache
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.AssemblyInfo.cs
+D:\FACULTATE\CURSURI\An2_Sem2\MDS\Git_proiect_mds\Git_project_Back_and_front\TravelApp_MDS_Project\Backend\TravelApp.Application\obj\Debug\net5.0\TravelApp.Application.csproj.CoreCompileInputs.cache

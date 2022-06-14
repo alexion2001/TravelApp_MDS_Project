@@ -38,7 +38,8 @@ export class ProfilComponent implements OnInit {
     
   }
   public restaurant(): void {
-    
+    var url = "https://www.google.com/search?q=restaurante+" + this.planificaForm.controls['oras'].value;
+    window.open(url, "_blank");
     
   }
 

@@ -2161,6 +2161,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "MailKit": "2.6.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.13",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
@@ -7335,20 +7336,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Facultate\\.nuget\\packages\\": {}
+    "C:\\Users\\alexi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Facultate\\source\\repos\\proiect_mds\\Backend\\TravelApp.Infrastructure\\TravelApp.Infrastructure.csproj",
+      "projectUniqueName": "D:\\FACULTATE\\CURSURI\\An2_Sem2\\MDS\\Git_proiect_mds\\Git_project_Back_and_front\\TravelApp_MDS_Project\\Backend\\TravelApp.Infrastructure\\TravelApp.Infrastructure.csproj",
       "projectName": "TravelApp.Infrastructure",
-      "projectPath": "C:\\Users\\Facultate\\source\\repos\\proiect_mds\\Backend\\TravelApp.Infrastructure\\TravelApp.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Facultate\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Facultate\\source\\repos\\proiect_mds\\Backend\\TravelApp.Infrastructure\\obj\\",
+      "projectPath": "D:\\FACULTATE\\CURSURI\\An2_Sem2\\MDS\\Git_proiect_mds\\Git_project_Back_and_front\\TravelApp_MDS_Project\\Backend\\TravelApp.Infrastructure\\TravelApp.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
+      "outputPath": "D:\\FACULTATE\\CURSURI\\An2_Sem2\\MDS\\Git_proiect_mds\\Git_project_Back_and_front\\TravelApp_MDS_Project\\Backend\\TravelApp.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Facultate\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -7361,8 +7367,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Facultate\\source\\repos\\proiect_mds\\Backend\\TravelApp.Application\\TravelApp.Application.csproj": {
-              "projectPath": "C:\\Users\\Facultate\\source\\repos\\proiect_mds\\Backend\\TravelApp.Application\\TravelApp.Application.csproj"
+            "D:\\FACULTATE\\CURSURI\\An2_Sem2\\MDS\\Git_proiect_mds\\Git_project_Back_and_front\\TravelApp_MDS_Project\\Backend\\TravelApp.Application\\TravelApp.Application.csproj": {
+              "projectPath": "D:\\FACULTATE\\CURSURI\\An2_Sem2\\MDS\\Git_proiect_mds\\Git_project_Back_and_front\\TravelApp_MDS_Project\\Backend\\TravelApp.Application\\TravelApp.Application.csproj"
             }
           }
         }
@@ -7429,7 +7435,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
