@@ -10,12 +10,16 @@ import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./profil.component.scss']
 })
 export class ProfilComponent implements OnInit {
+  
+  panelOpenState = false;
+  public email;
 
   public planificaForm: FormGroup = new FormGroup( 
     {
         oras: new FormControl(''),
       
     });
+   
 
   constructor(
     private router: Router,
@@ -25,6 +29,7 @@ export class ProfilComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.email = localStorage.getItem('Email');
   }
 
   public logout(): void {
