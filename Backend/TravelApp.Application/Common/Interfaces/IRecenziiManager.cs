@@ -10,7 +10,7 @@ namespace TravelApp.Application.Common.Interfaces
     public interface IRecenziiManager
     {
         void Create(Recenzii entity);
-
+        Task<List<Recenzii>> GetAllRec();
         void CreateRange(IEnumerable<Recenzii> entities);
         Task<bool> SaveAsync();
         void Update(Recenzii entity);
