@@ -19,6 +19,21 @@ namespace TravelApp.Controllers
         {
             _repository = repository;
         }
+        
+           [HttpGet]
+        public async Task<IActionResult> GetAllRec()
+        {
+            var ang = await _repository.GetAllRec();
+
+            var angToReturn = new List<RecenziiDTO>();
+
+            foreach (var angajat in ang)
+            {
+                angToReturn.Add(new RecenziiDTO(angajat));
+            }
+
+            return Ok(angToReturn);
+        }
         [HttpPost]
         public async Task<IActionResult> CreateRcenzii(CreateRecenziiDTO rec)
         {
