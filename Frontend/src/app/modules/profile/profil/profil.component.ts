@@ -29,7 +29,7 @@ export class ProfilComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.email = localStorage.getItem('Email');
+    this.email = localStorage.getItem('User');
   }
 
   public logout(): void {

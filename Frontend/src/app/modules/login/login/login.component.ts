@@ -30,6 +30,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  public openModal(): void {
+
+  }
+
   public login(): void {
     localStorage.setItem('Role', 'LoggedUser');
     
