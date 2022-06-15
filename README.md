@@ -38,4 +38,5 @@ https://trello.com/b/gWEmhbgM/backlogs
 Proiectul nostru a trecut printr-o serie de modificări (refactoring), cu scopul de a îmbunătății calitatea codului și păstrând funcționalitatea sa. Astfel, rezultatul final conține o arhitectura internă stabilă și performantă.
 
 ### Design Patterns
-Partea de backend a proiectului este formată din secțiuni independente care comunică între ele, asigurând astfel stabilitatea globală a programului.
+Partea de backend a proiectului este formată din secțiuni independente care comunică între ele, asigurând astfel stabilitatea globală a programului. De asemenea, interfețele reprezintă o parte importantă a implementării.
+
