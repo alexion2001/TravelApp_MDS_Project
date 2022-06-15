@@ -1,0 +1,29 @@
+<div id="container">
+    <div id="paragraf">
+        <p>
+            Împărtășește experiența ta cu ceilalți!
+        </p>
+    </div>
+    <div id="form-section">
+        <form [formGroup]="recenzieForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="oras">Orașul tău...</label>
+                <br>
+                <input type="text" class="form-control" id="oras" formControlName="oras">
+            </div>
+            <div class="form-group">
+                <label for="mesaj">Recenzia ta...</label>
+                <br>
+                <textarea formControlName="mesaj" id="mesaj" class="form-control" cols="30" rows="10"></textarea>
+                <!-- <input type="text" class="form-control" id="mesaj" formControlName="mesaj"> -->
+            </div>
+            <button type="submit" class="btn btn-success">Postează!</button>
+        </form>
+    </div>
+
+    <div>
+        <div id ="input-viewed">
+        
+        </div>
+    </div>  
+</div>

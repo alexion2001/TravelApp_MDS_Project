@@ -1,0 +1,113 @@
+#intro {
+    padding: 20px;
+    // margin: auto;
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    border: 3px solid #074f57;
+    border-radius: 10px;
+    background-color: #077187;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#blogs-list {
+    padding: 20px;
+    // margin: auto;
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1em;
+}
+
+.blogs-list-btn {
+    background-color: #9ece9a;
+    // text-align: center;
+    // line-height: 1em;
+    box-shadow: 0 1px 2px #5e5d5b;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+    // text-align: center;
+    // vertical-align: middle;
+    // line-height: 100px;  /*or you could use 4em*/
+}
+
+#top-oferte {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    border: 3px solid #9ece9a;
+    border-radius: 10px;
+    background-color: #74a57f;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#oferte {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+
+    // height: 30px;
+    // position: relative;
+    // border: 3px solid green;
+    background-color: #9ece9a;
+    border-radius: 10px;
+}
+
+.oferte-btn {
+    margin: 15px;
+    width: 25%;
+    background-color: #077187;
+    color: whitesmoke;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#create-trip-text {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    border: 3px solid #9ece9a;
+    border-radius: 10px;
+    background-color: #74a57f;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#filtre-btn {
+    background-color: #077187;
+    color: whitesmoke;
+}
+
+#container-filtre-btn {
+    padding: 1px;
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    width: 119px;
+    color: whitesmoke;
+}
+
+#mesaj_nimic{
+    color: #e8c4ac;;
+}

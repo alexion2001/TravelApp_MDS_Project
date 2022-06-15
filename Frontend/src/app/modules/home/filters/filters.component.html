@@ -1,0 +1,126 @@
+<div id="container">
+
+    <div id="container1">
+        <div id="label-form1">
+            <p>
+                Alege cum dorești să călătorești:
+            </p>
+        </div>
+        <div id="form-section1">
+            <form [formGroup]="detaliiForm" (ngSubmit)="onSubmitDetalii()">
+                <div class="form-group1">
+
+                    <h4>Orașul de Plecare</h4>
+                    <mat-form-field appearance="fill">
+                    <mat-label>Oras</mat-label>
+                    <select type="text" class="form-control" id="orasPlecare" formControlName="orasPlecare" matNativeControl required>
+                        <option value="BUH">Bucuresti</option>
+                        <option value="ROM">Roma</option>
+                        <option value="LON">Londra</option>
+                        <option value="BUE">Buenos Aires</option>
+                        <option value="CLJ">Cluj</option>
+                        <option value="CAI">Cairo</option>
+                        <option value="DUB"> Dublin</option>
+                        <option value="TYO">Tokyo</option>
+                        <option value="MIL">Milano</option>
+                        <option value="SEL">Seoul</option>
+                    </select>
+                    </mat-form-field>
+
+                </div><nav></nav>
+
+                <div class="form-group1">
+                    <h4>Orașul de Sosire</h4>
+                    <mat-form-field appearance="fill">
+                    <mat-label>Orașul de Sosire</mat-label>
+                    <select type="text" class="form-control" id="orasDestinatie" formControlName="orasDestinatie" matNativeControl required>
+                        <option value="BUH">Bucuresti</option>
+                        <option value="ROM">Roma</option>
+                        <option value="LON">Londra</option>
+                        <option value="BUE">Buenos Aires</option>
+                        <option value="CLJ">Cluj</option>
+                        <option value="CAI">Cairo</option>
+                        <option value="DUB"> Dublin</option>
+                        <option value="TYO">Tokyo</option>
+                        <option value="MIL">Milano</option>
+                        <option value="SEL">Seoul</option>
+                        <option value="PAR">Paris</option>
+
+                    </select>
+                    </mat-form-field>
+
+
+                </div>
+
+                <div class="form-group1">
+                    <label for="dataPlecare">Data de Plecare</label>
+                    <br>
+                    <input type="date" class="form-control" id="dataPlecare" formControlName="dataPlecare">
+                </div>
+                <div class="form-group1">
+                    <label for="dataSosire">Data de Sosire</label>
+                    <br>
+                    <input type="date" class="form-control" id="dataSosire" formControlName="dataSosire">
+                </div>
+                <div class="form-group1">
+                    <label for="buget">Bugetul</label>
+                    <br>
+                    <input type="number" class="form-control" id="buget" formControlName="buget">
+                </div>
+                <button type="submit" class="btn btn-success">Filtrează!</button>
+            </form>
+        </div>
+
+        <div *ngIf="submittedDetalii">
+        <!-- <div> -->
+            <div id="input-viewed">
+                <p>Orașul de Plecare: {{model.orasPlecare}}</p>
+                <p>Orașul de Sosire: {{model.orasDestinatie}}</p>
+                <p>Data de Plecare: {{model.dataPlecare | date:'dd/MM/yyyy'}}</p>
+                <p>Data de Sosire: {{model.dataSosire | date:'dd/MM/yyyy'}}</p>
+                <p>Bugetul: {{model.buget}} EUR</p>
+            </div>
+        </div>  
+    </div>
+
+    <div id="container2">
+        <div id="label-form2">
+            <p>
+                Ajută-ne să-ți găsim cazarea perfectă:
+            </p>
+        </div>
+        <div id="form-section2">
+            <form [formGroup]="cazareForm" (ngSubmit)="onSubmitCazare()">
+                <div class="form-group2">
+                    <label for="oras">Oraș</label>
+                    <input type="text" class="form-control" id="oras" formControlName="oras">
+                </div>
+                <div class="form-group2">
+                    <label for="dataCheckIn">Check In</label>
+                    <input type="date" class="form-control" id="dataCheckIn" formControlName="dataCheckIn">
+                </div>
+                <div class="form-group2">
+                    <label for="dataCheckOut">Check Out</label>
+                    <input type="date" class="form-control" id="dataCheckOut" formControlName="dataCheckOut">
+                </div>
+                <div class="form-group2">
+                    <label for="buget">Buget</label>
+                    <input type="text" class="form-control" id="buget" formControlName="buget">
+                </div>
+                
+                <button type="submit" class="btn btn-success">Caută Cazare!</button>
+            </form>
+        </div>
+
+        <div *ngIf="submittedCazare">
+        <!-- <div> -->
+            <div id="input-viewed">
+                <p>Oraș: {{cazare.oras}}</p>
+                <p>Check In: {{cazare.dataCheckIn | date:'dd/MM/yyyy'}}</p>
+                <p>Check Out: {{cazare.dataCheckOut | date:'dd/MM/yyyy'}}</p>
+                <p>Buget: {{cazare.buget}}</p>
+            </div>
+        </div>  
+    </div>
+
+</div>

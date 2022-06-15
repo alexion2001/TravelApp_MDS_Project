@@ -1,0 +1,40 @@
+
+<div id="container">
+    <div id="paragraf">
+        <p>
+            Te rugam sa te inregistrezi pentru a putea sa calatoresti in toata lumea !
+        </p>
+    </div>
+    <div id="form-section">
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <div class="form-group">
+                <label for="nume">Nume</label>
+                <br>
+                <input type="text" class="form-control" id="nume" formControlName="nume">
+            </div>
+            <div class="form-group">
+                <label for="prenume">Prenume</label>
+                <br>
+                <input type="text" class="form-control" id="prenume" formControlName="prenume">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <br>
+                <input type="text" class="form-control" id="email" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label for="tel">Telefon</label>
+                <br>
+                <input type="text" class="form-control" id="tel" formControlName="tel">
+            </div>
+            <div class="form-group">
+                <label for="parola">Parola</label>
+                <br>
+                <input type="password" class="form-control" id="parola" formControlName="parola">
+            </div>
+           
+            <button type="submit" class="btn btn-success">Login</button>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+<img src="../../assets/img/logo.png" class="img1" alt="logo">  
+
+
+<mat-drawer-container class="example-container" autosize>
+    <p id = 'bar'>
+        <mat-toolbar color=#74A57F>
+    
+          <button type="button" mat-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <div id = "titlu">Nume</div>
+          
+        </mat-toolbar>
+    </p>
+            
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <button (click)="numePag('Home')" class="nav-link"  routerLink="/home">Home</button>
+      <button (click)="numePag('Forum')" class="nav-link" routerLink="/forum">Forum</button>
+      <button (click)="numePag('Login')" class="nav-link" routerLink="/login">Login</button>
+      <button (click)="numePag('Register')" class="nav-link" routerLink="/register">Register</button>
+      <button (click)="numePag('Profil')" class="nav-link" routerLink="/profil">Profil</button>
+      
+     </mat-drawer>
+    
+</mat-drawer-container>
+
+<router-outlet> 
+      
+</router-outlet>
+

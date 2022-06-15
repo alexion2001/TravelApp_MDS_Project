@@ -1,0 +1,77 @@
+#container {
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+    background-color: #9fbba5;
+    border: 3px solid #79aa84;
+    border-radius: 10px;
+  }
+  
+  #paragraf {
+    margin: auto;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    width: 300px;
+    text-align: center;
+    align-content: center;
+    // vertical-align: center;
+    border: 3px solid #077187;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: 500;
+    background-color: #074f57;
+  }
+  
+  #form-section {
+    // border: 3px solid green;
+    color: #544536;
+    padding: 10px;
+  }
+  
+  label {
+    // border: 3px solid rgb(128, 34, 0);
+    vertical-align: center;
+  }
+  
+  .form-group {
+    margin: 13px;
+  }
+  
+  textarea, input[type=text],input[type=password] {
+    margin-top: 10px;
+    padding: 6px;
+    background-color: #ddc9ba;
+    border:0; // remove default border
+    border-bottom: 1px solid #74A57F;
+    box-shadow: 0 0 15px 5px rgba(98, 99, 93, 0.06);
+    border-radius: 10px;
+  }
+  
+  button {
+    /* remove default behavior */
+    // appearance: none;
+    // -webkit-appearance: none;
+  
+    /* usual styles */
+    padding: 10px;
+    border: none;
+    background-color: #077187;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 150px;
+  }
+  
+  #input-viewed {
+    border: 3px solid #077187;
+    border-radius: 10px;
+    background-color: #ddc9ba;
+    padding: 7px;
+    padding-top: 10px;
+    text-align: justify;
+  }
+  
+  #input-viewed p {
+    color: #544536;
+  }

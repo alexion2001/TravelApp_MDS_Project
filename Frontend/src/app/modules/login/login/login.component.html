@@ -1,0 +1,24 @@
+<div id="container">
+    <div id="paragraf">
+        <p>
+            Te rugam sa te loghezi pentru a putea intra in contul tau !
+        </p>
+    </div>
+    <div id="form-section">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="form-group">
+                <label for="username">Username sau email</label>
+                <br>
+                <input type="text" class="form-control" id="username" formControlName="username">
+            </div>
+            <div class="form-group">
+                <label for="parola">Parola</label>
+                <br>
+                <input type="password" class="form-control" id="parola" formControlName="parola">
+            </div>
+           
+            <button type="submit" class="btn btn-success">Login</button>
+        </form>
+    </div>
+
+</div>

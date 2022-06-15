@@ -1,0 +1,70 @@
+
+
+<div id="container">
+    <div class="paragraf">
+        <p>
+            Bine ai venit !
+        </p>
+        <p> Te-ai conectat cu contul {{email}} !</p>
+
+        <button (click) = "logout()">Logout</button>
+    </div>
+    <div class="paragraf">
+        <p>
+            Istoricul de cautari pentru zboruri
+        </p>
+        <div id = "istoricZboruri">
+            <p>Oras: Cluj, Plecare  pe data de 11/04/2022 Sosire pe data  13/04/2022</p>
+            <p>Oras: Paris, Plecare  pe data de 28/07/2022 sosire pe data  10/08/2022</p>
+            <p>Oras: Dublin, Plecare  pe data de 22/01/2022 Sosire pe data  01/02/2022</p>
+
+        </div>
+        
+    </div>
+    <div class="paragraf">
+        <p>
+            Istoricul de cautari pentru cazari
+        </p>
+        <div id = "istoricCazari"> 
+            <p>Oras: Paris, Cazare de pe data de 28/07/2022 pana pe data  10/08/2022</p>
+            <p>Oras: Dublin, Cazare de pe data de 22/01/2022 pana pe data  01/02/2022</p>
+
+        </div>
+        
+    </div>
+
+    <!-- <div class="paragraf">
+        <p>
+            Istoricul vacantelor tale
+        </p>
+        <div id = "istoricVacante">
+
+        </div>
+        
+    </div> -->
+    <div class="paragraf">
+        <p>
+           Planifica o vacanta cautand atractii turistice si restaurante
+        </p>
+
+
+        <div id="form-section">
+            <form [formGroup]="planificaForm">
+                <div class="form-group">
+                    <label for="oras">Oras</label>
+                    <br>
+                    <input type="text" class="form-control" id="oras" formControlName="oras">
+                </div>
+              
+            </form>
+            <p></p>
+        </div>
+
+
+        <button (click)="obiective()">Cauta obiective</button>
+        <button  (click)="restaurant()">Cauta restaurant</button>
+        
+    </div>
+  
+
+</div>

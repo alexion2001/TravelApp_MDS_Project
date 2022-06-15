@@ -1,0 +1,103 @@
+// !! stilizeaza pagina de filtre
+#container {
+    padding: 20px;
+    margin: 20px;
+    background-color: #9fbba5;
+    border: 3px solid #79aa84;
+    border-radius: 10px;
+}
+
+#label-form1 {
+    padding-top: 10px;
+    margin: auto;
+    width: 300px;
+    text-align: center;
+    border: 3px solid #077187;
+    border-radius: 10px;
+}
+
+#form-section1 {
+    padding: 10px;
+    // border: 3px solid green;
+    // margin-top: 20px;
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    text-align: center;
+}
+
+label {
+    // border: 3px solid rgb(128, 34, 0);
+    vertical-align: center;
+}
+
+input[type=text], input[type=number], input[type=date] {
+    padding: 5px;
+    margin: 7px 0px;  // add top and bottom margin
+    // margin-top: 7px;
+    width: 96%;
+    border:0; // remove default border
+    border-bottom: 1px solid #74A57F;  // add only bottom border
+    box-shadow: 0 0 15px 5px rgba(98, 99, 93, 0.06);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: inherit;
+}
+select {
+    padding: 3px;
+    margin-left: 4px;
+    width: 150%;
+    border:0; // remove default border
+    border-bottom: 1px solid #74A57F;  // add only bottom border
+    box-shadow: 0 0 15px 5px rgba(98, 99, 93, 0.06);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    /* remove default behavior */
+    // appearance: none;
+    // -webkit-appearance: none;
+
+    /* usual styles */
+    padding: 10px;
+    border: none;
+    background-color: #077187;
+    color: whitesmoke;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 150px;
+}
+
+#label-form2 {
+    padding-top: 10px;
+    margin: 20px auto 20px auto;
+    width: 300px;
+    text-align: center;
+    border: 3px solid #077187;
+    border-radius: 10px;
+}
+
+#form-section2 {
+    padding: 10px;
+    // border: 3px solid green;
+    // margin-top: 20px;
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    text-align: center;
+}
+
+#input-viewed {
+    border: 3px solid #077187;
+    border-radius: 10px;
+    background-color: #ddc9ba;
+    padding: 15px;
+    padding-top: 15px;
+    text-align: justify;
+}
