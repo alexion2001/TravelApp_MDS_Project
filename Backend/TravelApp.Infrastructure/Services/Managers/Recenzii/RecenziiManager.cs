@@ -47,7 +47,11 @@ namespace TravelApp.Infrastructure.Services.Managers.Recenzii
             _context.Set<Domain.Entities.Recenzii>().RemoveRange(entities);
         }
 
+       public async  Task<List<Domain.Entities.Recenzii>> GetAllRec()
+       {
+           return await _context.RecenziiC.ToListAsync();
 
+       }
        
     }
 }
