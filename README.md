@@ -38,7 +38,8 @@ https://trello.com/b/gWEmhbgM/backlogs
 Proiectul nostru a trecut printr-o serie de modificări (refactoring), cu scopul de a îmbunătății calitatea codului și păstrând funcționalitatea sa. Astfel, rezultatul final conține o arhitectura internă stabilă și performantă.
 
 ### Design Patterns
-Partea de backend a proiectului este formată din secțiuni independente care comunică între ele, asigurând astfel stabilitatea globală a programului. De asemenea, interfețele reprezintă o parte importantă a implementării.
+Scheletul intern al aplicatiei este construit folosind ONION architecture, divizand componentele si entitatile in layere ce nu comunica intre ele. Astfel, avem layer-ul de Domain unde sunt create structurile entitatilor ce urmeaza a fi integrate in baza de date, Application layer-ul care contine logica de business, viewmodels si interfete care sunt implementate in cele din urma in Infrastructure layer.
+In plus, pentru a asigura structura modulara a aplicatiei, este folosit Mediator pattern care are la baza principiul numit "Separation of Concerns". Acesta se asigura ca sub nicio forma 2 componente nu comunica intre ele, astfel evitand leak-uri de informatie si crash-ul intregii aplicatii. Daca un serviciu este down, datorita pattern-urilor implementate, aplicatia va continua sa ruleze doar cu serviciile disponibile, iar utilizatorul poate in continuare sa fie in contact cu produsul final.
 ### DEMO
 
 http://sc.com.ly/show/25ae7a5e-9224-41d8-ab32-812f78daa46c
