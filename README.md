@@ -39,6 +39,6 @@ Proiectul nostru a trecut printr-o serie de modificări (refactoring), cu scopul
 
 ### Design Patterns
 Partea de backend a proiectului este formată din secțiuni independente care comunică între ele, asigurând astfel stabilitatea globală a programului. De asemenea, interfețele reprezintă o parte importantă a implementării.
-###DEMO
+### DEMO
 
 http://sc.com.ly/show/25ae7a5e-9224-41d8-ab32-812f78daa46c
